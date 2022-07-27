@@ -1,5 +1,22 @@
 # Microfrontend Rick and Morty
 
-Creación de proyecto con Vite, para ejecutar en local el proyecto: 
+Creación de proyecto con Vite
 
-`npm run dev`
+### Para ejecutar en local el proyecto: 
+```shell 
+  npm run dev 
+```
+
+### Para compilar proyecto:
+```shell 
+  npm run build
+```
+
+### Para deployar, publicar:
+```shell 
+  npm run deploy
+```
+
+## Página desplegada
+
+[https://lidiaramirezn.github.io/microfront-rick-morty/](https://lidiaramirezn.github.io/microfront-rick-morty/)
