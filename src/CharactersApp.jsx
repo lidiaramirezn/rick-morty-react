@@ -11,12 +11,14 @@ export const CharactersApp = () => {
   }
 
   return (
-    <div className="">
-      {
-        characters.map(character => 
-          <Character key= { character.id } {...character}/>)
-      }
-      
-    </div>
+    <section className="characters">
+      <h2>Personajes de Rick and Morty</h2>
+      <div>
+        {
+          characters.map(character => 
+            <Character key= { character.id } {...character}/>)
+        }        
+      </div>
+    </section>    
   )
 }

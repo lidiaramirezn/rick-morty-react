@@ -12,7 +12,8 @@ export const loadCharacters = async() => {
     name: result.name,
     status: result.status,
     species: result.species,
-    image: result.image
+    image: result.image,
+    location: result.location.name
   }))
 
   return data;
