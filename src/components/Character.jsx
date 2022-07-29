@@ -1,10 +1,10 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 
 export const Character = ({ image, name, species, status, location }) => {
   return (
     <div className="card">
       <figure className="card__figure">
-        <img className="card__image" src={ image } alt="" />
+        <img className="card__image" src={ image } alt={ name } />
       </figure>
       <section className="card__information">
         <p className="card__name">{ name }</p>
@@ -16,4 +16,9 @@ export const Character = ({ image, name, species, status, location }) => {
       </section>      
     </div>
   )
+}
+
+Character.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired
 }
