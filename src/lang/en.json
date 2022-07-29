@@ -1,0 +1,9 @@
+{
+  "title": "Rick and Morty Characters",
+  "Alive": "Alive",
+  "Dead": "Dead",
+  "Human": "Human",
+  "Alien": "Alien",
+  "unknown": "unknown",
+  "location": "Last known location"
+}
