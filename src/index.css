@@ -57,3 +57,19 @@ body {
   color: #909090;
   margin-bottom: 2px;
 }
+
+.characters__navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.characters__flag {
+  width: 32px;
+  height: auto;
+}
+
+.characters__flag--button {
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+}

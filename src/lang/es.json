@@ -1,0 +1,9 @@
+{
+  "title": "Personajes de Rick and Morty",
+  "Alive": "Vivo",
+  "Dead": "Muerto",
+  "Human": "Humano",
+  "Alien": "Extraterrestre",
+  "unknown": "Desconocido",
+  "location": "Última ubicación conocida"
+}
