@@ -1,4 +1,4 @@
-# Microfrontend Rick and Morty
+# Aplicación Rick and Morty
 
 Creación de proyecto con Vite
 
