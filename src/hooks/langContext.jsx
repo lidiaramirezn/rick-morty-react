@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import messagesEN from '../lang/en.json';
 import messagesES from '../lang/es.json';
-import {IntlProvider} from 'react-intl';
+import { IntlProvider } from 'react-intl';
 
 const langContext = React.createContext();
 
@@ -13,7 +13,6 @@ const LangProvider = ({children}) => {
 
 	defaultLocale = lang ? lang : 'en';
 	defaultMessage = (lang && lang === 'es') ? messagesES : messagesEN;
-
 
 	const [ messages, setMessages ] = useState(defaultMessage);
 	const [ locale, setLocale ] = useState(defaultLocale);
