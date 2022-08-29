@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import messagesEN from '../lang/en.json';
 import messagesES from '../lang/es.json';
 import { IntlProvider } from 'react-intl';
 
 const langContext = React.createContext();
 
-const LangProvider = ({children}) => {
-	let defaultLocale;
+const LangProvider = ({ children }) => {
 
-	let defaultMessage;
 	const lang = localStorage.getItem('lang');
 
-	defaultLocale = lang ? lang : 'en';
-	defaultMessage = (lang && lang === 'es') ? messagesES : messagesEN;
+	let defaultLocale = lang ? lang : 'en';
+	let defaultMessage = (lang && lang === 'en') ? messagesEN : messagesES;
 
 	const [ messages, setMessages ] = useState(defaultMessage);
 	const [ locale, setLocale ] = useState(defaultLocale);
@@ -28,6 +26,11 @@ const LangProvider = ({children}) => {
 			setLocale('en');
 		}
 	}
+
+	useEffect(() => {
+		localStorage.setItem('lang', 'en');
+	}, [])
+	
 
 	return (
 		<langContext.Provider value={{setLanguage: setLanguage}}>

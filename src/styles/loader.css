@@ -1,0 +1,39 @@
+.loader__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.loader {
+  fill: none;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke: #202329;
+}
+
+.loader__circle {
+  stroke-width: 8px;
+  stroke: #DADADA;
+}
+
+.loader__animate {
+  stroke-dasharray: 242.6;
+  animation: fill-animation 500ms cubic-bezier(1,1,1,1) 0s infinite;
+}
+
+@keyframes fill-animation{
+  0% {
+    stroke-dasharray: 40 242.6;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 141.3;
+    stroke-dashoffset: 141.3;
+  }
+  100% {
+    stroke-dasharray: 40 242.6;
+    stroke-dashoffset: 282.6;
+  }
+}

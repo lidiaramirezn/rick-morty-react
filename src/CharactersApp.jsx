@@ -1,42 +1,51 @@
-import React, { useContext } from 'react';
-import { Character } from './components';
+import React, { useContext, useState } from 'react';
 import { useFetchApi } from './hooks'
-import { FormattedMessage } from 'react-intl';
-import flagEs from './assets/es.svg';
-import flagEn from './assets/en.svg';
-import { langContext } from './hooks';
+import { Character, Loader, Navbar, Pagination } from './components';
 
 export const CharactersApp = () => {
   
-  const { characters, isLoading } = useFetchApi();
-  const language = useContext(langContext);
+  const [ url, setUrl ] = useState('');
+  const [ current, setCurrent] = useState(1);
+  const { characters, info, isLoading } = useFetchApi(url);
 
+  const handleNextPage = () => {
+    setUrl(info.next);
+    setCurrent(current + 1);
+    window.scrollTo(0, 0);
+  };
+
+  const handlePreviousPage = () => {
+    setUrl(info.prev)
+    setCurrent(current - 1)
+    window.scrollTo(0, 0);
+  };
+  
   return (
-      <section className="characters">
-        <div className="characters__navbar">
-          <h2>
-            <FormattedMessage id="title" defaultMessage="Personajes"/>
-          </h2>
-          <div>
-            <button 
-              className="characters__flag--button" 
-              onClick={() => language.setLanguage('es')}>
-              <img className="characters__flag" src={flagEs} alt="bandera española" />
-            </button>
-            <button 
-              className="characters__flag--button" 
-              onClick={() => language.setLanguage('en')}>
-              <img className="characters__flag" src={flagEn} alt="bandera de Estados unidos" />
-            </button>
-          </div>
-        </div>
-
-        <div>
-          {
-            characters.map(character => 
-              <Character key= { character.id } {...character}/>)
-          }
-        </div>
-      </section>    
+    <>
+      { isLoading ? 
+          <Loader /> : 
+          <main className="characters">          
+            <Navbar />
+            <Pagination 
+              pages = { info.pages } 
+              currentPage = { current }
+              onPreviousPage = {handlePreviousPage} 
+              onNextPage = { handleNextPage } 
+            />
+            <section className="characters__cards">
+            {
+              characters.map(character => 
+                <Character key= { character.id } {...character}/>)
+            }
+            </section>
+            <Pagination 
+              info = { info } 
+              currentPage = { current }
+              onPreviousPage = {handlePreviousPage} 
+              onNextPage = { handleNextPage } 
+            />
+          </main> 
+      }
+    </>
   )
 }
