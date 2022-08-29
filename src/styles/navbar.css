@@ -1,0 +1,64 @@
+.navbar__title {
+  color: #fff;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.navbar__flags {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.navbar__flag {
+  width: 20px;
+  height: auto;
+}
+
+.navbar__flag--button {
+  border: 1px solid Gainsboro;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 5px;
+  background-color: #fff;
+  color: DimGray;
+}
+
+.navbar__flag--active {
+  background-color: #00c3ff;
+  color: #fff;
+}
+
+.navbar__flag--button span {
+  margin-right: 5px;
+  font-size: 1.2em;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar__title {
+    font-size: 2em;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar__flag {
+    width: 24px;
+    height: auto;
+  }
+  
+  .navbar__flags {
+    margin-top: 0;
+  }
+
+  .navbar__flag--button {
+    height: 35px;
+  }
+
+  .navbar__flag--button span {
+    font-size: 1.45em;
+  }
+}

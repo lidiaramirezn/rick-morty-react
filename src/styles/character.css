@@ -1,0 +1,96 @@
+.card {
+  display: inline-block;
+  width: 280px;
+  height: 350px;  
+  margin: 20px 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 20px rgb(0 0 0 / 20%);
+  border-radius: 10px;
+  
+}
+
+.card__figure {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background-color: hsl(0,0%,89%);
+  overflow: hidden;  
+}
+
+.card__figure--animation {
+  animation: glowing 1s linear infinite alternate;
+  box-shadow: 0px 0px 50px -12px currentColor;
+  transition: 1.8s;
+}
+
+.card__information {
+  background-color: #fff;
+  color: #474747;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.card__name {  
+  padding: 5px 20px;
+  background: #581845;
+  border-radius: 20px;
+  display: inline-block;
+  color: white;  
+}
+
+.card__status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin: 10px;
+  vertical-align: middle;
+}
+
+.card__status-point {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  height: 0.5rem;
+  width: 0.5rem;
+  margin-right: 0.375rem;  
+  border-radius: 50%;
+}
+
+.card__status-point--green {
+  background: rgb(85, 204, 68);
+}
+
+.card__status-point--grey  {
+  background: rgb(158, 158, 158);
+}
+
+.card__status-point--red  {
+  background: rgb(214, 61, 46);
+}
+
+.card__specie-icon {
+  margin-left: 5px;
+  height: 16px;
+}
+
+.card__location {
+  font-size: 14px;
+}
+
+.card__location--subtitle {
+  display: block;
+  font-weight: 300;
+  color: #909090;
+  margin-bottom: 2px;
+}
+
+@keyframes glowing {
+  0% { color: rgba(255, 0, 0, 0.85) }
+  50% { color: rgba(0, 255, 0, 0.85) }
+  100% { color: rgba(0, 255, 255, 0.85) }
+}

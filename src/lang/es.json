@@ -5,5 +5,12 @@
   "Human": "Humano",
   "Alien": "Extraterrestre",
   "unknown": "Desconocido",
-  "location": "Última ubicación conocida"
+  "location": "Última ubicación conocida",
+  "Humanoid": "Humanoide",
+  "Poopybutthole": "Poopybutthole",
+  "Mythological Creature": "Criatura mitologica",
+  "Animal": "Animal",
+  "Robot": "Robot",
+  "Cronenberg": "Mutante",
+  "Disease": "Bacterias"
 }

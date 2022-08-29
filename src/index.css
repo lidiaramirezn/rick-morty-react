@@ -9,67 +9,19 @@ body {
 
 .characters {
   padding: 20px;
-  background-color: #F3F3F3;
+  background-color: #000;
 }
 
-.card {
-  display: inline-block;
-  margin: 20px 10px;
-  width: 300px;
-  background-color: #fff;
-}
-
-.card__figure {
+.characters__cards {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 20px;
+  margin: 20px auto;
 }
 
-.card__image {
-  border-radius: 50%;
-  max-width: 200px;
-}
-
-.card__information {
-  background-color: #474747;
-  color: #fff;
-  padding: 10px 20px;
-}
-
-.card__name {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.card__status {
-  font-size: 14px;
-  font-weight: 400;
-  margin: 10px;
-}
-
-.card__location {
-  font-size: 14px;
-}
-
-.card__location--subtitle {
-  display: block;
-  font-weight: 300;
-  color: #909090;
-  margin-bottom: 2px;
-}
-
-.characters__navbar {
-  display: flex;
-  justify-content: space-between;
-}
-
-.characters__flag {
-  width: 32px;
-  height: auto;
-}
-
-.characters__flag--button {
-  border: none;
-  cursor: pointer;
-  margin: 0 5px;
+@media screen and (min-width: 768px) {
+  .characters__cards {
+    max-width: 1360px;
+  }
 }
