@@ -12,5 +12,9 @@
   "Animal": "Animal",
   "Robot": "Robot",
   "Cronenberg": "Mutante",
-  "Disease": "Bacterias"
+  "Disease": "Bacterias",
+  "previous": "Anterior",
+  "next": "Siguiente",
+  "pages": "Páginas",
+  "of": "de"
 }

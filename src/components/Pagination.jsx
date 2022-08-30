@@ -1,4 +1,5 @@
 import '@styles/pagination.css';
+import { FormattedMessage } from 'react-intl';
 
 export const Pagination = ({ pages, currentPage, onPreviousPage, onNextPage }) => {
 
@@ -7,14 +8,20 @@ export const Pagination = ({ pages, currentPage, onPreviousPage, onNextPage }) =
       <button 
         disabled = { currentPage === 1 }
         className="pagination__button pagination__button--prev" 
-        onClick={onPreviousPage}>Anterior
+        onClick={onPreviousPage}>
+        <FormattedMessage id="previous" defaultMessage="Previous"/>
       </button>
       <button 
         disabled = { currentPage === pages }
         className="pagination__button pagination__button--next" 
-        onClick={onNextPage}>Siguiente
+        onClick={onNextPage}>
+        <FormattedMessage id="next" defaultMessage="Next"/>
       </button>      
-      <span className="pagination__text">{ currentPage } de { pages } Páginas</span>
+      <span className="pagination__text">
+        { currentPage }  
+        &nbsp;<FormattedMessage id="of" defaultMessage="of"/> { pages }  
+        &nbsp;<FormattedMessage id="pages" defaultMessage="Pages"/>
+      </span>
     </div>
   )
 }

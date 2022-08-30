@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { useFetchApi } from './hooks'
 import { Character, Loader, Navbar, Pagination } from './components';
 

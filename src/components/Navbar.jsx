@@ -16,7 +16,7 @@ export const Navbar = () => {
   return (
     <div className="navbar">
         <h2 className="navbar__title">
-          <FormattedMessage id="title" defaultMessage="Personajes"/>
+          <FormattedMessage id="title" defaultMessage="Characters"/>
         </h2>
         <div className="navbar__flags">
           <button 
