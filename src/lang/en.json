@@ -12,5 +12,9 @@
   "Animal": "Animal",
   "Robot": "Robot",
   "Cronenberg": "Cronenberg",
-  "Disease": "Disease"
+  "Disease": "Disease",
+  "previous": "Previous",
+  "next": "Next",
+  "pages": "Pages",
+  "of": "of"
 }

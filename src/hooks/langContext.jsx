@@ -29,7 +29,9 @@ const LangProvider = ({ children }) => {
 	}
 
 	useEffect(() => {
-		localStorage.setItem('lang', 'en');
+		if(!localStorage.getItem('lang')) {
+			localStorage.setItem('lang', 'en');
+		}		 
 	}, [])
 	
 
