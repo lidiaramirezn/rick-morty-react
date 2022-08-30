@@ -10,12 +10,13 @@ const LangProvider = ({ children }) => {
 	const lang = localStorage.getItem('lang');
 
 	let defaultLocale = lang ? lang : 'en';
-	let defaultMessage = (lang && lang === 'en') ? messagesEN : messagesES;
+	let defaultMessage = (lang && lang === 'es') ? messagesES : messagesEN;
 
 	const [ messages, setMessages ] = useState(defaultMessage);
 	const [ locale, setLocale ] = useState(defaultLocale);
 
 	const setLanguage = (language) => {
+		console.log('setLanguage', language)
 		if(language === 'es') {
 			setMessages(messagesES);
 			localStorage.setItem('lang', 'es')
