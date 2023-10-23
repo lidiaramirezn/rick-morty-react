@@ -40,7 +40,7 @@ Se siguió los siguientes pasos:
 - Agregar el siguiente script
   ```js
   "scripts": {
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   }
   ```
 
